@@ -6,13 +6,23 @@ class Results extends Component {
   }
 
   render() {
-    console.log(this.props.data)
-
     return (
       <div>
-        {this.props.data.map(results => {
-          return results.title
-        })}
+        {this.props.data.map((results, i) =>
+          <li key={i} id="eachMovie">
+            <div id="title">
+              <h2>
+                {results.title}
+              </h2>
+            </div>
+            <br />
+            <div id="overview">
+              <p>
+                {results.overview}
+              </p>
+            </div>
+          </li>
+        )}
       </div>
     )
   }

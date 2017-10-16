@@ -27,6 +27,7 @@ class App extends Component {
       .title}`
     fetch(url).then(r => r.json()).then(json => {
       this.setState({ movies: json.results })
+      console.log(json.results)
     })
   }
 
